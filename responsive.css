@@ -1,0 +1,102 @@
+.topBody {
+  background-color: #ffffff;
+}
+
+.logoBlock {
+  padding: 1.5rem 0rem;
+}
+
+.logoBlock figure img {
+  height: 5rem;
+  width: auto;
+  margin-left: 1.5rem;
+}
+
+.navBlock {
+  background-color: rgb(255, 174, 0);
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  justify-content: center;
+}
+
+
+/* Step5: column2 */
+.navLinks {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+/* Step6: contentContainer */
+.navLinks li {
+  list-style-type: none;
+}
+
+.navLinks li a {
+  text-decoration: none;
+  font-size: 1.6rem;
+  color: #002239;
+  font-weight: 400;
+}
+
+/* ::::::Regular Navbar CSS:::::: */
+
+
+
+.navBlock #iconToggle {
+  cursor: pointer;
+  /* for understading display: none; is given at the end of CSS*/
+  /* display: none; */
+}
+
+.navBlock .hamburgerIcon {
+  /* background-color: crimson; */
+  color: #002239;
+  font-size: 2rem;
+  border: 1.5px solid #002239;
+  padding: 0.25rem 0.75rem 0.1rem;
+  border-radius: 0.25rem;
+  /* for understading display: none; is given at the end of CSS*/
+  /* display: none; */
+}
+
+.navBlock #iconToggle {
+  display: none;
+}
+
+.navBlock .hamburgerIcon {
+  display: none;
+}
+
+/* Small devices (landscape phones, upto 576px and below) */
+@media (width <=576px) {
+  .grid-1,
+  .grid-2,
+  .grid-3,
+  .grid-4 {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .navBlock .hamburgerIcon {
+    display: block;
+    /* Show the hamburger icon on small devices */
+    position: absolute;
+    top: 2rem;
+    right: 3rem;
+    cursor: pointer;
+  }
+
+  .navLinks {
+    flex-direction: column;
+    display: none;
+  }
+
+  /* equal to display: Block (show or Hide) */
+  #iconToggle:checked ~ .navLinks {
+    display: flex;
+  }
+
+}
